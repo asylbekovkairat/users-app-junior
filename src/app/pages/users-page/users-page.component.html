@@ -1,0 +1,13 @@
+<app-header></app-header>
+<mat-progress-bar
+  *ngIf="(status$ | async) === 'loading'"
+  mode="query"
+></mat-progress-bar>
+<section class="users-wrapper">
+  <app-user-card
+    *ngFor="let user of users$ | async"
+    [user]="user"
+    (openEditDialog)="openEditDialog(user)"
+    (deleteUser)="deleteUser(user.id)"
+  ></app-user-card>
+</section>

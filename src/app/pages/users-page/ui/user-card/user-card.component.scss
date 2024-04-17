@@ -1,0 +1,12 @@
+.card {
+  width: 350px;
+  color: white;
+  background-color: var(
+    --mat-stepper-header-selected-state-icon-background-color
+  );
+}
+
+.card-actions {
+  background-color: white;
+  margin-top: 15px;
+}
